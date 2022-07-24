@@ -9,5 +9,9 @@ Invoke-WebRequest "https://github.com/arratres/papayed/blob/main/barca.mp3?raw=t
 
 Set-Wallpaper -value "$env:TEMP\Papay.jpg"
 
-## opens barca
-Add-Type -AssemblyName presentationCore;$player = New-Object system.windows.media.mediaplayer;$player.Open("$env:TEMP\barca.mp3");$player.Play()
+# opens barca, although when cmd is closed, not playing anymore
+# don't want to be more aggresive
+Add-Type -AssemblyName presentationCore;
+$player = New-Object system.windows.media.mediaplayer;
+$player.Open("$env:TEMP\barca.mp3");
+$player.Play() 
